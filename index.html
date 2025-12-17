@@ -26,4 +26,173 @@
             </nav>
         </div>
     </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Queijo Coalho Artesanal de Qualidade</h2>
+                <p>O verdadeiro sabor do Interior Pernambucano, feito com tradição e carinho a mais de 20 anos</p>
+                <a href="#pedido" class="btn">Fazer Pedido Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <h2 class="section-title">Nossos Produtos</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <div class="produto-img" style="background-color: #f0f0f0;">
+                        <!-- Imagem do queijo coalho -->
+                        <i class="fas fa-cheese"></i>
+                    </div>
+                    <h3>Queijo Coalho Tradicional</h3>
+                    <p class="descricao">Queijo coalho cremoso no ponto perfeito para churrasco</p>
+                    <p class="preco">R$ 32,00</p>
+                </div>
+
+                <div class="produto-card">
+                    <div class="produto-img" style="background-color: #f0f0f0;">
+                        <!-- Imagem do queijo furadinho -->
+                        <i class="fas fa-cheese"></i>
+                    </div>
+                    <h3>Queijo Coalho Furadinho</h3>
+                    <p class="descricao">Queijo coalho com textura especial, perfeito para grelhados</p>
+                    <p class="preco">R$ 35,00</p>
+                </div>
+
+                <div class="produto-card">
+                    <div class="produto-img" style="background-color: #f0f0f0;">
+                        <!-- Imagem da cocada -->
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <h3>Cocada Cremosa</h3>
+                    <p class="descricao">Doce tradicional nordestino, cremoso e saboroso</p>
+                    <p class="preco">R$ 7,00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Pedido -->
+    <section id="pedido" class="pedido">
+        <div class="container">
+            <h2 class="section-title">Faça seu Pedido</h2>
+            <p class="section-subtitle">Preencha o formulário e seu pedido será enviado diretamente para nosso WhatsApp</p>
+            
+            <form id="pedidoForm">
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone (WhatsApp) *</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="endereco">Endereço de Entrega *</label>
+                    <textarea id="endereco" name="endereco" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Selecione os Produtos:</label>
+                    
+                    <div class="produto-select">
+                        <div class="produto-item">
+                            <div class="produto-info">
+                                <span class="produto-nome">Queijo Coalho Tradicional - R$ 32,00</span>
+                            </div>
+                            <div class="quantidade">
+                                <button type="button" class="qtd-btn minus" data-produto="queijo_coalho">-</button>
+                                <input type="number" id="qtd_queijo_coalho" value="0" min="0" readonly>
+                                <button type="button" class="qtd-btn plus" data-produto="queijo_coalho">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="produto-item">
+                            <div class="produto-info">
+                                <span class="produto-nome">Queijo Coalho Furadinho - R$ 35,00</span>
+                            </div>
+                            <div class="quantidade">
+                                <button type="button" class="qtd-btn minus" data-produto="queijo_furadinho">-</button>
+                                <input type="number" id="qtd_queijo_furadinho" value="0" min="0" readonly>
+                                <button type="button" class="qtd-btn plus" data-produto="queijo_furadinho">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="produto-item">
+                            <div class="produto-info">
+                                <span class="produto-nome">Cocada - R$ 7,00</span>
+                            </div>
+                            <div class="quantidade">
+                                <button type="button" class="qtd-btn minus" data-produto="cocada">-</button>
+                                <input type="number" id="qtd_cocada" value="0" min="0" readonly>
+                                <button type="button" class="qtd-btn plus" data-produto="cocada">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes" name="observacoes" rows="3" placeholder="Alguma observação especial sobre seu pedido?"></textarea>
+                </div>
+                
+                <div class="resumo-pedido">
+                    <h4>Resumo do Pedido</h4>
+                    <div id="resumoConteudo">
+                        <p>Nenhum produto selecionado</p>
+                    </div>
+                    <div class="total">
+                        <strong>Total: R$ <span id="totalPedido">0,00</span></strong>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-enviar">
+                    <i class="fab fa-whatsapp"></i> Enviar Pedido pelo WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contato-grid">
+                <a href="https://wa.me/55SEUNUMERO" target="_blank" class="contato-card whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Clique para conversar conosco</p>
+                </a>
+                
+                <a href="https://instagram.com/SEUPERFIL" target="_blank" class="contato-card instagram">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>Siga-nos para novidades</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Biliu <span>Queijos</span></h2>
+                    <p>O verdadeiro sabor nordestino</p>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2023 Biliu Queijos. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+</html>
